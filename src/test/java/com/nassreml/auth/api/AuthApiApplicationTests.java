@@ -1,4 +1,4 @@
-package com.nassreml.auth_api;
+package com.nassreml.auth.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
