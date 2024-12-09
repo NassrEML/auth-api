@@ -1,14 +1,23 @@
 spring:
   application:
     name: auth-api
-    datasource:
-      url: jdbc:postgresql://localhost:5432/kn-db
-      username: root
-      password: root
-      driver-class-name: org.postgresql.Driver
-    jpa:
-      hibernate:
-        ddl-auto: update
-      show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/users
+    username: root
+    password: root
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
+
 jwt:
-  secret: secret
+  secret: 4bygjlH3lAX7hr339WPitt5uA4K5jC1JQQRlo5uvD1TomvHO06HghwGDYO0wl4tFvFA5aFhpyuCkF78v0DGIQRULL8JJhxE82itIotL944Doj3Ogx4vRbtPLqrVVfvAroxdLJvUdOqlJ8qFdDMiOq9fOYZgp6LEsy7Abi1ExQuxd03C2BR58YURxqVr7sxTusOKKT64bruTytJ09vlJYUXbFmtlF14w1LID8LVRB7ySiYTTolIPBl5iX5W33Q7l1C95obI1ws2rQHSICsXWPu85D0QwBKpC8Q6SZpQIgkseDYeHTVQqD2hxP83yihS82Xz1CRfb0bzKeYDZr5uhuTqQg0aEzwog8mjQQ7ehQ3g3eRS9UVhlVcSZB8DYXclPUS3rDQ6VIS7o67puQ7itAzHa07rsVmcZUiGgiYt82VqKZrgAL6XJpjLFeYloKdMl86mc2ubRk80T2pP8cRApJlxM4QV7X5LvUQGXQMluwU50oQqwt116CYP5KaJPhSbPU
+
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug

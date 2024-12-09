@@ -37,7 +37,7 @@ public class JwtServiceImpl implements JwtService {
                                         .toInstant())
                 )
                 .expiration(Date.from(expirationDate.atZone(ZoneId.systemDefault()).toInstant()))
-                .signWith(getSecretKey(), Jwts.SIG.HS256)
+                .signWith(getSecretKey(), Jwts.SIG.HS512)
                 .compact();
         return TokenResponse.builder().accessToken(token).build();
     }
